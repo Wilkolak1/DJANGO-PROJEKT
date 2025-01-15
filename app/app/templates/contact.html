@@ -1,0 +1,14 @@
+{% extends 'form.html' %}
+
+{% block form %}
+    <form action="{% url 'contact' %}" method="post">
+        {% if sent %}
+            <b class="text-success">Wiadomość została wysłana!</b>
+        {% endif %}
+        <h1>Wiadomość</h1>
+        <span>Wyślij wiadomość z zapytaniem:</span>
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Wyślij wiadomość</button>
+    </form>
+{% endblock %}

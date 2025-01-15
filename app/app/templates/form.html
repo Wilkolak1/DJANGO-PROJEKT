@@ -1,0 +1,10 @@
+{% extends 'root.html' %}
+
+{% block content %}
+    <div class="p-5">
+        <div class="container form-container">
+            {% block form %}{% endblock %}
+            <img src="{% block form-image%}/static/auth-image.jpg{%endblock%}" alt="Car" class="form-image">
+        </div>
+    </div>
+{% endblock %}

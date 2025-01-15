@@ -1,0 +1,24 @@
+{% extends 'form.html' %}
+
+{% block form %}
+    <form action="{% url 'order' id=car.id %}" method="post">
+        {% if done %}
+            <b class="text-success">Zamówiono! Będziemy się z tobą kontaktować.</b>
+        {% endif %}
+        <h1>Zamówienie</h1>
+        <b>{{car.name}}</b>
+        {% csrf_token %}
+        {{ form }}
+        <span id="total_price"></span>
+        <button type="submit">Zamów</button>
+    </form>
+{% endblock %}
+
+{% block form-image%}{% url 'car_image' id=car.id %}{%endblock%}
+
+{% block head%}
+<script>
+        const price_per_day = {{car.price_per_day}};
+</script>
+<script src="/static/order.js"></script>
+{%endblock%}

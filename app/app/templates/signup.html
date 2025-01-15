@@ -1,0 +1,14 @@
+{% extends 'form.html' %}
+
+{% block form %}
+    <form action="{% url 'signup' %}" method="post">
+        {% for error in errors %}
+            <b class="text-danger">{{error}}</b>
+        {% endfor %}
+        <h1>Rejestracja</h1>
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Zarejestruj się</button>
+        <a href="{% url 'signin' %}">Masz konto? Zaloguj się</a>
+    </form>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'root.html' %}
+
+{% block content %}
+<main class="">
+    <header class="bg-light p-5">
+        <h2 class="text-center">Lista samochodów dostępnych na wynajem</h2>
+    </header>
+    <section class="cars">
+        {% for car in cars %}
+            <div class="car bg-light">
+                <img src="{% url 'car_image' id=car.id %}" alt="{{car.name}}">
+                <div>
+                    <h2>{{car.name}}</h2>
+                    <p>{{car.description}}</p>
+                    <b>{{car.price_per_day}}zł na dzień</b>
+                    <a href="{% url 'order' id=car.id %}">Zamów</a>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+</main>
+{% endblock %}
+
+

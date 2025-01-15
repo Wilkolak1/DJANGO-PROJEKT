@@ -1,0 +1,57 @@
+{% extends 'root.html' %} {% block content %}
+<header class="home-header">
+  <h1>KillerRent</h1>
+</header>
+<main class="home-content">
+  <h1>Witamy w KillerRent – Twoja Zaufana Wypożyczalnia Samochodów Sportowych! 🚗</h1>
+  <p>
+    Szukasz niezawodnego auta na wyjazd służbowy, rodzinny wypad za miasto, czy
+    krótki wypad na weekend? U nas znajdziesz idealny samochód dostosowany do
+    Twoich potrzeb!
+  </p>
+  <h2>Dlaczego warto wybrać nas?</h2>
+  <ul>
+    <li>
+      <b>Szeroki wybór aut</b> – Oferujemy samochody sportowe, elektryczne,
+      luksusowe limuzyny oraz Supersamochody.
+    </li>
+    <li><b>Atrakcyjne ceny</b> – Przejrzyste warunki bez ukrytych opłat.</li>
+    <li>
+      <b>Elastyczne terminy wynajmu</b> – Na godziny, dni, a nawet
+      długoterminowe wynajmy.
+    </li>
+    <li>
+      <b>Wygodna rezerwacja online</b> – Zarezerwuj samochód w kilku prostych
+      krokach.
+    </li>
+    <li>
+      <b>Pełne bezpieczeństwo</b> – Wszystkie nasze pojazdy są regularnie
+      serwisowane i ubezpieczone.
+    </li>
+  </ul>
+  <h2>Jak to działa?</h2>
+  <ol>
+    <li>
+      <b>Wybierz samochód</b> – Przeglądaj naszą ofertę i znajdź pojazd idealny
+      dla siebie.
+    </li>
+    <li>
+      <b>Zarezerwuj online</b> – Wypełnij formularz rezerwacji w kilka minut.
+    </li>
+    <li>
+      <b>Odbierz auto</b> – Odbierz wybrany samochód w dogodnym punkcie lub
+      skorzystaj z dostawy pod wskazany adres.
+    </li>
+    <li>
+      <b>Ciesz się jazdą!</b> – Korzystaj z wynajętego auta, ciesząc się pełną
+      swobodą podróży.
+    </li>
+  </ol>
+  <p>
+    <a href="{% url 'cars' %}" class="btn btn-dark btn-sm" role="button">
+      Rezerwuj Teraz
+    </a> 
+    i dołącz do grona zadowolonych klientów naszej wypożyczalni. Z nami podróżowanie staje się prostsze!
+  </p>
+</main>
+{% endblock %}
